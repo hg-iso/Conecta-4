@@ -1,0 +1,23 @@
+
+INSTRUCCIONES PARA PROBAR DISTINTOS JUGADORES
+_____________________________________________
+
+A la hora de utilizar otro jugador vs random, será nece-
+sario mover de la carpeta el jugador deseado a la carpeta
+principal y cambiar su nombre a "player.pl", con tal de
+no modificar el archivo "connect4.pl" y entregarlo como
+lo piden en la pauta, es decir, sin modificaciones además
+de las indicadas en el README.txt.
+_____________________________________________
+
+Si se quieren probar dos jugadores distintos, será
+necesario modificar en "connect4.pl" los nombres de
+las primeras instrucciones ->  use_module('jugador.pl')...
+
+:- use_module('rndplay.pl', [ rnjesus/3 ]),
+   use_module('player.pl', [ ai_move/3 as player1_move ]), // Primer jugador - X
+   use_module('player.pl', [ ai_move/3 as player2_move ]). // Segundo jugador - O
+   
+No olvidar, tras haber hecho los testings correspondientes
+dejar el programa como estaba desde un inicio
+______________________________________________
