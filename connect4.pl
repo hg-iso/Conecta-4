@@ -1,23 +1,23 @@
 % --- Connect-4 in Prolog ---
 % Run with: ?- play.
 % Execute with: swipl -s jugar.pl -g play -t halt
-:- use_module('rndplay.pl', [ rnjesus/3 ]).
-%   use_module('player.pl', [ ai_move/3 as player1_move ]),
-%   use_module('player.pl', [ ai_move/3 as player2_move ]).
+:- use_module('rndplay.pl', [ rnjesus/3 ]),
+   use_module('player.pl', [ ai_move/3 as player1_move ]),
+   use_module('player.pl', [ ai_move/3 as player2_move ]).
 :- dynamic config/1.
 
 % Parameters
 config(X):-
     dconf(X).
-dconf(start(0)).          % Random rounds played before start
+dconf(start(2)).          % Random rounds played before start
 dconf(delay(0)).          % Extend the response time of atomatic players
-dconf(difficulty(n)).     % set random player difficulty (e: easy, n:normal, h:hard)
+dconf(difficulty(h)).     % set random player difficulty (e: easy, n:normal, h:hard)
 dconf(p_mode(x, rand)).   % use user(auto/rand) to ask a human(an AI/random) player
-dconf(p_mode(o, rand)).   % use user(auto/rand) to ask a human(an AI/random) player
+dconf(p_mode(o, auto)).   % use user(auto/rand) to ask a human(an AI/random) player
 dconf(manual_check(n)).   % use n(y) to (not) allow manual invalid moves
-dconf(pout(n)).           % use y(n) to (not) save match results in matches.csv
+dconf(pout(y)).           % use y(n) to (not) save match results in matches.csv
 dconf(show(y)).           % use y(n) to (not) show the board and midgame messages
-dconf(ntest(1000)).       % number of games to play in test
+dconf(ntest(50)).       % number of games to play in test
 initial_board([[],[],[],[],[],[],[]]).
 
 %--- Test Modes
