@@ -15,9 +15,9 @@ necesario modificar en "connect4.pl" los nombres de
 las primeras instrucciones ->  use_module('jugador.pl')...
 
 :- use_module('rndplay.pl', [ rnjesus/3 ]),
-   use_module('player.pl', [ ai_move/3 as player1_move ]), // Primer jugador - X
-   use_module('player.pl', [ ai_move/3 as player2_move ]). // Segundo jugador - O
+   use_module('player1.pl', [ ai_move/3 as player1_move ]), // Primer jugador - X
+   use_module('player2.pl', [ ai_move/3 as player2_move ]). // Segundo jugador - O
    
 No olvidar, tras haber hecho los testings correspondientes
-dejar el programa como estaba desde un inicio
+dejar el programa como estaba desde un inicio.
 ______________________________________________

@@ -11,7 +11,7 @@
 %  el motor del torneo lo carga por ese nombre exacto.
 % ============================================================
 
-:- module(player_dumb, [ai_move/3]).
+:- module(player, [ai_move/3]).
 
 % ------------------------------------------------------------
 %  ai_move(+Ficha, +Tablero, -Columna)

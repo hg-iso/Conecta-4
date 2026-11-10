@@ -12,7 +12,7 @@
 %   * Sin assert ni retract. Siempre entrega una columna valida.
 % ============================================================
 
-:- module(player_less_dumb, [ai_move/3]).
+:- module(player, [ai_move/3]).
 
 % ------------------------------------------------------------
 %  ai_move(+Ficha, +Tablero, -Columna)
